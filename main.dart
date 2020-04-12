@@ -53,7 +53,11 @@ void main() {
   // Array
   final values = [1, 2, 3, 5, 10, 50];
   values.map(scream).forEach(print);
+  values.reversed.map(scream).forEach(print);
 
   // Skip array
   values.skip(1).take(3).map(scream).forEach(print);
+
+  print(false ? 'true' : 'false');
+  if (false) print('test if one line');
 }
