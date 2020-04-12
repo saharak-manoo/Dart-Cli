@@ -1,15 +1,19 @@
 class Bicycle {
   int cadence;
-  int speed;
   int gear;
-  
-  Bicycle(this.cadence, this.speed, this.gear);
-  
-  @override
-  String toString() => 'Bicycle: $speed mph';
+  int _speed = 99;
+
+  Bicycle(this.cadence, this.gear);
+  int get speed => _speed;
+  String info() {
+    return 'This bike has: ${cadence.toString()} cadence, ${gear.toString()} gear, and ${_speed.toString()} speed.';
+  }
+
+  // @override
+  // String toString() => 'Bicycle: $speed mph';
 }
 
 void main() {
-  var bike = new Bicycle(2, 200, 1);
-  print(bike);
+  var bike = new Bicycle(2, 2);
+  print(bike.info());
 }
